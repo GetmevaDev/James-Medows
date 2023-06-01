@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React,{useEffect, useState}  from 'react';
 import './App.css';
 
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Loader from './components/Loader';
+import { useDispatch } from 'react-redux';
+import { homePageData } from './utils/pages';
+
+
+
 function App() {
+  const dispatch = useDispatch()
+  const[data, setData] = useState(null)
+  async function getHomePageData(){
+    let data = await fetch(
+      "https://cms-james-medows.herokuapp.com/api/home-page?populate=deep"
+    );
+    let json = await data.json();
+    // console.log(json);
+    
+    setData(json)
+    dispatch(homePageData(json))
+  }
+  useEffect(()=> {
+    getHomePageData()
+  },[])
+
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!data ? <Loader /> : (
+        <>
+        <Header />
+          <Outlet />  
+        <Footer />
+        </>
+      )}
+      
     </div>
   );
 }

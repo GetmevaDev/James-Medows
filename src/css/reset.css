@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+:root {
+  --primary-font: "ITC Avant Garde Std";
+  --secondary-font: "Montserrat";
+  --primary-color: #007cdc;
+  --secondary-color: #fbb040;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+.h1 {
+  font-weight: 700;
+  font-size: 111px;
+  line-height: 88%;
+  color: #ffffff;
+}
+h2,
+.h2 {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 100%;
+  color: #000000;
+}
+
+p,
+.p {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #343434;
+}

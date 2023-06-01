@@ -1,0 +1,33 @@
+/* .home .imageBannerText {
+  background-color: #F7F7F7;
+
+} */
+.imageBannerText.bg-gray {
+  background-color: #F7F7F7;
+  
+
+}
+.imageBannerText {
+  padding: 100px 0;
+}
+
+.imageBannerText__wrapper {
+  display: flex;
+  gap: 0 70px;
+
+}
+.imageBannerText__wrapper.reverse {
+  flex-direction: row-reverse;
+}
+.imageBannerText__content h2 {
+  margin-bottom: 30px;
+}
+.imageBannerText__content ul {
+  margin: 30px  0;
+}
+.imageBannerText__content ul li {
+  list-style: disc;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  line-height: 30px;
+}

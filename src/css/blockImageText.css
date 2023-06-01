@@ -1,0 +1,23 @@
+.blockImageText {
+  padding: 100px 0;
+}
+.blockImageText h2 {
+  margin: 50px 0;
+}
+.blockImageText ol {
+  margin: 25px 0;
+}
+.blockImageText ul {
+  margin: 25px 0;
+}
+.blockImageText  li {
+  font-family: var(--secondary-font);
+  list-style: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 188% */
+
+  color: #343434;
+  margin-left: 25px;
+}

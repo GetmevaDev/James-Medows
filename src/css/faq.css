@@ -1,0 +1,56 @@
+.faq {
+  margin-top: 270px;
+  padding-bottom: 100px;
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.faq__accordion {
+  background-color: var(--primary-color);
+  padding:0 40px;
+}
+.accordion_icon {
+  transition: 500ms;
+  transform: rotate(180deg);
+}
+.rotate_180 {
+  transition: 500ms;
+  transform: rotate(0deg);
+}
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  
+}
+.question h4 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.answer p {
+  
+  color: #FFFFFF;
+  margin-top: 40px;
+}
+.answer {
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0,1,0,1);
+}
+/*below here height for accordion question */
+.answer.show {
+  height: 125px;
+  max-height:200px;
+  transition: all 1s cubic-bezier(0,1,0,1);
+}
+
+.accordion__item {
+  border-bottom: 1px solid #fff;
+  padding: 40px 0;
+}

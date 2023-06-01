@@ -1,0 +1,63 @@
+.ourProfiles__body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  padding: 100px 0 225px;
+  margin-bottom: 285px;
+}
+.ourProfiles__company-wrapper {
+  display: flex;
+  gap: 0 30px;
+
+  position: absolute;
+  bottom: -190px;
+}
+.ourProfiles__company {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
+  width: 370px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ourProfiles__body h2 {
+  color: #FFFFFF;
+  text-align: center;
+}
+.ourProfiles p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.ourProfiles__card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 20px;
+}
+.ourProfiles__card {
+  background-color: var(--secondary-color);
+  padding: 30px 22px 0px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 500ms;
+}
+.ourProfiles__card:hover {
+  transition: 500ms;
+  transform: scale(1.05);
+}
+.ourProfiles__card p {
+  margin-top: 15px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #ffffff;
+}

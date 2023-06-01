@@ -1,0 +1,17 @@
+.imageBanner {
+  padding: 100px 0;
+}
+.imageBanner__grid {
+  display: flex;
+  gap: 0 70px;
+  align-items: center;
+}
+.imageBanner__content h4 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%;
+  color: var(--primary-color);
+}
+.imageBanner__content h2 {
+  margin-bottom: 10px;
+}

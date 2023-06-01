@@ -1,0 +1,46 @@
+
+.header__grid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content:right;
+}
+.header__nav {
+  padding: 43px 0 39px 0;
+  /* float: right; */
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list__item {
+  margin-left: 38px;
+}
+.nav__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.274286px;
+  color: #000000;
+}
+
+.header__logo {
+  width: 292px;
+  height: 190px;
+  background: #ffffff;
+  box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.header .active {
+  font-weight: 700;
+  color: var(--primary-color);
+}

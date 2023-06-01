@@ -1,0 +1,40 @@
+.slider {
+  margin-top: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 0;
+  height: 497px;
+}
+
+.slider h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.slider__body p {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.slider__logos {
+  display: flex;
+  align-items: center;
+  gap: 0 30px ;
+}
+.slider__logos .slider__avva {
+ padding: 5px;
+ background-color: #fff;
+ border-radius: 10px;
+}
+
+
+.slider__item {
+  transform: scale(1);
+  position: relative;
+  bottom: -50px;
+}

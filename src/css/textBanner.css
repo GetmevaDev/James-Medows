@@ -1,0 +1,22 @@
+.textBnner {
+  padding: 100px 0;
+  background-color: #f7f7f7;
+}
+
+.textBanner__desc {
+  margin-top: 50px;
+  padding-left: 30px;
+  border-left: 16px solid var(--primary-color);
+}
+.textBanner__desc ul {
+  margin: 25px 0;
+}
+.textBanner__desc li {
+  font-family: var(--secondary-font);
+  list-style: disc;
+  margin-left: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: #343434;
+}
