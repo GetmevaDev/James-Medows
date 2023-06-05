@@ -8,8 +8,6 @@ import Loader from './components/Loader';
 import { useDispatch } from 'react-redux';
 import { homePageData } from './utils/pages';
 
-
-
 function App() {
   const dispatch = useDispatch()
   const[data, setData] = useState(null)
@@ -18,8 +16,6 @@ function App() {
       "https://cms-james-medows.herokuapp.com/api/home-page?populate=deep"
     );
     let json = await data.json();
-    // console.log(json);
-    
     setData(json)
     dispatch(homePageData(json))
   }
