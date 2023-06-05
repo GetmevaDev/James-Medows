@@ -9,6 +9,7 @@ function Faq({ title, itemArr }) {
     }
 
     setSelected(i);
+    
   }
   return (
     <section className="faq">
