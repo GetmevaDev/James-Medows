@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../css/header.css";
+import { useDispatch } from "react-redux";
+import { logoData } from "../utils/pages";
 function Header() {
+  const dispatch = useDispatch()
   const [logoInfo, setLogoInfo] = useState([]);
   useEffect(() => {
+    async function getLogo() {
+      let data = await fetch(
+        "https://cms-james-medows.herokuapp.com/api/logos?populate=deep"
+      );
+      let logo = await data.json();
+      const {
+        alternativeText,
+        url,
+      } = logo.data[0].attributes.Logo.data.attributes;
+      setLogoInfo([alternativeText, url]);
+      dispatch(logoData([alternativeText, url])) 
+
+      
+    }
     getLogo();
-  }, []);
+  }, [dispatch]);
 
-  async function getLogo() {
-    let data = await fetch(
-      "https://cms-james-medows.herokuapp.com/api/logos?populate=deep"
-    );
-    let logo = await data.json();
-
-    const {
-      alternativeText,
-      url,
-    } = logo.data[0].attributes.Logo.data.attributes;
-    setLogoInfo([alternativeText, url]);
-  }
+  
   if(logoInfo.length ===0) return null
   
   return (

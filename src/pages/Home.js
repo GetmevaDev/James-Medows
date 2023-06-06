@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import ChooseUs from "../components/ChooseUs";
 import OurProfiles from "../components/OurProfile";
@@ -8,6 +8,7 @@ import ImageBannerText from "../components/ImageBannerText";
 import ContactUs from "../components/ContactUs";
 import slider_bg from "../images/slider_bg.jpg";
 import { useSelector } from "react-redux";
+
 
 function Home() {
   const json = useSelector((store) => store.pagesData.homePage);
@@ -20,57 +21,33 @@ function Home() {
   const [imageBannerText, setImageBannerText] = useState(null);
   const [contactUs, setContactUs] = useState(null);
 
-  function getData() {    
-
-    const {
-      Banner,
-      Chooseus,
-      OutProfiles,
-      Slider,
-      FAQ,
-      ImageBannerText,
-      ContactUs,
-    } = json.data.attributes;
-
-    setBanner(Banner);
-    setChooseUs(Chooseus);
-    setOurProfiles(OutProfiles);
-    setSlider(Slider);
-    setFaq(FAQ);
-    setImageBannerText(ImageBannerText);
-    setContactUs(ContactUs);
-  }
+  
 
   useEffect(() => {
+    function getData() {    
+
+      const {
+        Banner,
+        Chooseus,
+        OutProfiles,
+        Slider,
+        FAQ,
+        ImageBannerText,
+        ContactUs,
+      } = json.data.attributes;
+  
+      setBanner(Banner);
+      setChooseUs(Chooseus);
+      setOurProfiles(OutProfiles);
+      setSlider(Slider);
+      setFaq(FAQ);
+      setImageBannerText(ImageBannerText);
+      setContactUs(ContactUs);
+    }
+   
     getData();
-  }, []);
-  // useEffect(() => {
-  //   getHomePageData();
-  // }, []);
-  // async function getHomePageData() {
-
-  //   let data = await fetch(
-  //     "https://cms-james-medows.herokuapp.com/api/home-page?populate=deep"
-  //   );
-  //   let json = await data.json();
-  //   const {
-  //     Banner,
-  //     Chooseus,
-  //     OutProfiles,
-  //     Slider,
-  //     FAQ,
-  //     ImageBannerText,
-  //     ContactUs,
-  //   } = json.data.attributes;
-
-  //   setBanner(Banner);
-  //   setChooseUs(Chooseus);
-  //   setOurProfiles(OutProfiles);
-  //   setSlider(Slider);
-  //   setFaq(FAQ);
-  //   setImageBannerText(ImageBannerText);
-  //   setContactUs(ContactUs);
-  // }
+  }, [json]);
+ 
 
   // check data
   if (!banner) return null;

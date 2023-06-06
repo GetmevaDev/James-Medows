@@ -11,27 +11,30 @@ import { homePageData } from './utils/pages';
 function App() {
   const dispatch = useDispatch()
   const[data, setData] = useState(null)
-  async function getHomePageData(){
-    let data = await fetch(
-      "https://cms-james-medows.herokuapp.com/api/home-page?populate=deep"
-    );
-    let json = await data.json();
-    setData(json)
-    dispatch(homePageData(json))
-  }
+ 
   useEffect(()=> {
+    async function getHomePageData(){
+      let data = await fetch(
+        "https://cms-james-medows.herokuapp.com/api/home-page?populate=deep"
+      );
+      let json = await data.json();
+      setData(json)
+      dispatch(homePageData(json))
+    }
     getHomePageData()
-  },[])
+  },[dispatch])
 
+ 
 
   return (
     
     <div className="App">
       {!data ? <Loader /> : (
+       
         <>
         <Header />
           <Outlet />  
-        <Footer />
+        <Footer /> 
         </>
       )}
       
