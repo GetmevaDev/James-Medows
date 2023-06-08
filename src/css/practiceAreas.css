@@ -1,0 +1,31 @@
+.practiceAreas .g-hero h1 {
+  width: 459px;
+}
+.practiceAreas__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 100px 0;
+}
+.practiceAreas__link {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
+  height: 218px;
+  width: 218px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  transition: 300ms;
+}
+.practiceAreas__link:hover {
+  transition: 300ms;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  
+}

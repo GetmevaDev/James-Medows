@@ -15,6 +15,18 @@ import Reviews from "./pages/Reviews";
 import ContactUs from "./pages/ContactUs";
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import PracticeAreas from "./pages/PracticeAreas";
+import MakeOverLaw from "./pages/MakeOverLaw";
+import CDL from "./pages/CDL";
+import JuniorLicense from "./pages/JuniorLicense";
+import DrivingWithout from "./pages/DrivingWithout";
+import SuspendedRevoked from "./pages/SuspendedRevoked";
+import DrivingWithoutTraffic from "./pages/DrivingWithoutTraffic";
+import FailureToAppear from "./pages/FailureToAppear";
+import FailureToFile from "./pages/FailureToFile";
+import FailureToPay from "./pages/FailureToPay";
+import FaultInAFatalCarAccident from "./pages/FaultInAFatalCarAccident";
+import ViolatingCourtJudgment from "./pages/ViolatingCourtJudgment";
 
 
 
@@ -34,12 +46,8 @@ const appRouter = createBrowserRouter([
         element:<About />
       },
       {
-        path:'/speeding-tickets',
-        element:<SpeedingTickets />
-      },
-      {
-        path: "/sell-phone-tickets",
-        element:<SellPhoneTickets />
+        path:"/practice-areas",
+       element: <PracticeAreas />
       },
       {
         path: "/courts-we-cover",
@@ -52,7 +60,59 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />
-      }
+      },
+      {
+        path:'/speeding-tickets',
+        element:<SpeedingTickets />
+      },
+      {
+        path: "/sell-phone-tickets",
+        element:<SellPhoneTickets />
+      },
+      {
+        path: "/make-over-law",
+        element:<MakeOverLaw />
+      },
+      {
+        path: "/cdl",
+        element: <CDL />
+      },
+      {
+        path: "/junior-license",
+        element:<JuniorLicense />
+      },
+      {
+        path: "/driving-without",
+        element:<DrivingWithout />
+      },
+      {
+        path: "/suspended-revoked",
+        element:<SuspendedRevoked />
+      },
+      {
+        path: "/driving-without-traffic",
+        element:<DrivingWithoutTraffic />
+      },
+      {
+        path: "/failure-to-appear",
+        element:<FailureToAppear />
+      },
+      {
+        path: "/failure-to-file",
+        element:<FailureToFile />
+      },
+      {
+        path: "/failure-to-pay",
+        element:<FailureToPay />
+      },
+      {
+        path: "/fault-in-car-accident",
+        element:<FaultInAFatalCarAccident />
+      },
+      {
+        path: "/violating-court-judgment",
+        element:<ViolatingCourtJudgment />
+      },
     ]
   }
 ])

@@ -49,7 +49,7 @@ function Header() {
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/speeding-tickets" className="nav__link">
+                <NavLink to="/practice-areas" className="nav__link">
                   Practice Areas
                 </NavLink>
               </li>
