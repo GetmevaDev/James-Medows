@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import GeneralHero from "../components/GeneralHero";
 import "../css/practiceAreas.css";
+import { useDispatch } from "react-redux";
+import { getSubLink } from "../utils/pages";
 function PracticeAreas() {
+  const dispatch = useDispatch()
   const [banner, setBanner] = useState(null);
   const [area, setArea] = useState([]);
   useEffect(() => {
@@ -22,6 +25,10 @@ function PracticeAreas() {
   if (!banner) return null;
   if (area.length === 0) return null;
 
+  function getSublink(e){
+    console.log(e.target.textContent);
+    dispatch(getSubLink(e.target.textContent))
+  }
   return (
     <main className="practiceAreas">
       <GeneralHero
@@ -37,7 +44,8 @@ function PracticeAreas() {
             <NavLink
               to={item.url && item.url}
               key={item.id}
-              className="practiceAreas__link"
+              className={item.url? "practiceAreas__link": "practiceAreas__link disable"}
+              onClick={(e)=> getSublink(e)}
             >
               {item.text}
             </NavLink>

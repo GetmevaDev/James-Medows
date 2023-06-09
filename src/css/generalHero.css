@@ -26,3 +26,31 @@
 
   z-index: 2;
 }
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.breadcrumbs .previous {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 126.9%;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-color);
+}
+.breadcrumbs .current {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 126.9%;
+  letter-spacing: 0.02em;
+
+  color: #343434;
+}
+.breadcrumbs .arrow {
+  margin: 0 7px;
+  color: #343434;
+  font-weight: 400;
+}

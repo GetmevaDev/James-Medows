@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../css/header.css";
 import { useDispatch } from "react-redux";
-import { logoData } from "../utils/pages";
+import { getCurrentPage, getSubLink, logoData } from "../utils/pages";
 function Header() {
   const dispatch = useDispatch()
   const [logoInfo, setLogoInfo] = useState([]);
@@ -26,6 +26,10 @@ function Header() {
 
   
   if(logoInfo.length ===0) return null
+  function getLinkText(e){
+    dispatch(getCurrentPage(e.target.textContent))
+    dispatch(getSubLink(''))
+  }
   
   return (
     <div className="header">
@@ -44,27 +48,27 @@ function Header() {
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/about" className="nav__link">
+                <NavLink to="/about" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   About Us
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/practice-areas" className="nav__link">
+                <NavLink to="/practice-areas" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Practice Areas
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/courts-we-cover" className="nav__link">
+                <NavLink to="/courts-we-cover" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Courts We Cover
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/reviews" className="nav__link">
+                <NavLink to="/reviews" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Reviews
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/contact" className="nav__link">
+                <NavLink to="/contact" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Contact Us
                 </NavLink>
               </li>

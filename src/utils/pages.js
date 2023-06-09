@@ -5,7 +5,9 @@ const pages = createSlice({
   initialState: {
     homePage: {},
     aboutPage:{},
-    logo:[]
+    logo:[],
+    currentPage:"",
+    subLink:''
   },
   reducers: {
     homePageData: (state, action) => {
@@ -16,9 +18,15 @@ const pages = createSlice({
     },
     logoData:(state, action)=> {
       state.logo = action.payload
+    },
+    getCurrentPage:(state, action)=> {
+      state.currentPage = action.payload
+    },
+    getSubLink:(state, action)=> {
+      state.subLink = action.payload
     }
   },
 });
 
-export const { homePageData, aboutPageData, logoData } = pages.actions;
+export const { homePageData, aboutPageData, logoData , getCurrentPage, getSubLink} = pages.actions;
 export default pages.reducer;

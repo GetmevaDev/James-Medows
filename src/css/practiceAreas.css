@@ -29,3 +29,7 @@
   color: #ffffff;
   
 }
+.practiceAreas__link.disable {
+  pointer-events: none;
+  background-color: #b3b2b2;
+}

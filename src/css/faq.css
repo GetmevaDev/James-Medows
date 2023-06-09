@@ -45,8 +45,8 @@
 }
 /*below here height for accordion question */
 .answer.show {
-  height: 125px;
-  max-height:200px;
+  height: auto;
+  max-height:230px;
   transition: all 1s cubic-bezier(0,1,0,1);
 }
 
