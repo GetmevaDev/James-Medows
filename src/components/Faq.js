@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../css/faq.css";
 import accordion_icon from "../images/accordion_icon.svg";
 function Faq({ title, itemArr }) {
-  console.log(itemArr);
   const [selected, setSelected] = useState(null);
   function toggle(i) {
     if (selected === i) {
