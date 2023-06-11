@@ -85,3 +85,37 @@
 
   color: #bca667;
 }
+
+@media (max-width:768px) {
+  .footer__list {
+    display: none;
+  }
+  .footer__logo  {
+    height: 150px;
+    left: 30%;
+  }
+  .footer__nav {
+    justify-content: center;
+  }
+}
+@media (max-width:590px) {
+  .footer__logo  {
+    left: 23%;
+  }
+  .foooter__rights {
+    flex-direction: column;
+  }
+  .foooter__rights .rights {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width:490px) {
+  .footer__logo  {
+    left: 15%;
+  }
+}
+@media (max-width:425px) {
+  .footer__logo  {
+    left: 6%;
+  }
+}

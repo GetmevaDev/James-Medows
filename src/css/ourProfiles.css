@@ -10,9 +10,11 @@
 .ourProfiles__company-wrapper {
   display: flex;
   gap: 0 30px;
-
+  width: 100%;
+  justify-content: center;
   position: absolute;
   bottom: -190px;
+  left: 0;
 }
 .ourProfiles__company {
   background-color: #ffffff;
@@ -23,8 +25,9 @@
   align-items: center;
   justify-content: center;
 }
+
 .ourProfiles__body h2 {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 .ourProfiles p {
@@ -39,7 +42,7 @@
 .ourProfiles__card {
   background-color: var(--secondary-color);
   padding: 30px 22px 0px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,4 +63,94 @@
   text-align: center;
 
   color: #ffffff;
+}
+
+/* Media */
+
+@media (max-width: 1200px) {
+  .ourProfiles__company {
+    width: 300px;
+    height: 300px;
+  }
+  .ourProfiles__company-wrapper {
+    bottom: -135px;
+  }
+}
+@media (max-width: 1092px) {
+  .ourProfiles__company-wrapper {
+    bottom: -135px;
+  }
+}
+@media (max-width: 1034px) {
+  .ourProfiles__company-wrapper {
+    bottom: -135px;
+    /* left: 17px; */
+  }
+}
+@media (max-width: 1000px) {
+  .ourProfiles__company {
+    width: 250px;
+    height: 250px;
+  }
+  .ourProfiles__company img {
+    width: 70%;
+  }
+  .ourProfiles__company-wrapper {
+    bottom: -135px;
+  }
+  .ourProfiles__body {
+    padding: 100px 0 180px;
+    margin-bottom: 200px;
+  }
+}
+@media (max-width: 918px) {
+  .ourProfiles__company-wrapper {
+    bottom: -80px;
+  }
+  .ourProfiles__company {
+    width: 200px;
+    height: 200px;
+}
+.ourProfiles__card-wrapper {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px ;
+}
+}
+@media (max-width: 768px) {
+  .ourProfiles__company-wrapper {
+    bottom: -80px;
+  }
+  .ourProfiles__company {
+    width: 200px;
+    height: 200px;
+}
+}
+@media (max-width: 732px) {
+  .ourProfiles__company-wrapper {
+    bottom: -80px;
+}
+.ourProfiles__body {
+  padding: 80px 0 150px;
+  margin-bottom: 157px;
+}
+}
+@media (max-width: 700px) {
+  .ourProfiles__company {
+    width: 150px;
+    height: 150px;
+}
+.ourProfiles__body {
+  padding: 80px 0 100px;
+}
+.ourProfiles__company-wrapper {
+  gap: 0 10px ;
+}
+.ourProfiles p {
+  margin-bottom: 30px;
+}
+}
+@media (max-width: 700px) {
+  .ourProfiles__card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

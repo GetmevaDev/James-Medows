@@ -42,3 +42,28 @@
 
   color: #ffffff;
 }
+
+@media (max-width:900px) {
+  .chooseUs__card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    justify-content: center;
+}
+} 
+@media (max-width:600px) {
+  .chooseUs__card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    justify-content: center;
+}
+.chooseUs__card {
+  padding: 20px 22px 20px;
+  
+}
+.chooseUs__card p {
+  margin-top: 20px;
+ 
+}
+} 

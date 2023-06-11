@@ -10,7 +10,14 @@ import stars from "../images/Review.png"
 function SliderItem({ arr }) {
   return (
     <div>
-    <Swiper modules={[Navigation]} navigation slidesPerView={3} spaceBetween={30} className="mySwiper">
+    <Swiper modules={[Navigation]} navigation slidesPerView={1} breakpoints={{
+      600:{
+      slidesPerView:2
+    },
+    900:{
+      slidesPerView:3
+    }
+    }} spaceBetween={30} className="mySwiper">
       {arr.map((item) => {
         return (
           <SwiperSlide key={item.id}>

@@ -48,3 +48,35 @@
   line-height: 36px;
   color: #000000;
 }
+
+@media (max-width:750px) {
+  .contactUs__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 0;
+}
+.contactUs  {
+  padding: 0 0 20px;
+}
+.contactUs__content {
+  padding: 62px 0 20px;
+}
+}
+
+@media (max-width:590px){
+  .contactUs__content li p {
+    font-size: 16px;
+  }
+  .contactUs__content li {
+    
+    margin-top: 25px;
+}
+}
+@media (max-width:425px) {
+  .contactUs__content li p span {
+    margin-left: 17px;
+    font-size: 15px;
+}
+.contactUs__content li p .phone-bold {
+  font-size: 25px;
+}
+}

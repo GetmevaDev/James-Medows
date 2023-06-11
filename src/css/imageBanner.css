@@ -15,3 +15,30 @@
 .imageBanner__content h2 {
   margin-bottom: 10px;
 }
+
+@media (max-width: 900px) {
+  .imageBanner__grid {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+  .imageBanner {
+    padding: 50px 0;
+  }
+  .imageBanner__img {
+    width: 400px;
+  }
+  .imageBanner__img img {
+    width: 100%;
+  }
+  .imageBanner__content h2 {
+    text-align: center;
+  }
+  .imageBanner__content h4 {
+    text-align: center;
+  }
+}
+@media (max-width: 590px) {
+  .imageBanner__img {
+    width: 300px;
+}
+}

@@ -1,3 +1,9 @@
+.blockImageText__img {
+  width: 100%;
+}
+.blockImageText__img img {
+  width: 100%;
+}
 .blockImageText {
   padding: 100px 0;
 }
@@ -20,4 +26,15 @@
 
   color: #343434;
   margin-left: 25px;
+}
+
+@media (max-width:768px) {
+  .blockImageText {
+    padding: 50px 0;
+}
+}
+@media (max-width:590px) {
+  .blockImageText h2 {
+    margin: 25px 0;
+}
 }

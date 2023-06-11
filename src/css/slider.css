@@ -24,17 +24,29 @@
 .slider__logos {
   display: flex;
   align-items: center;
-  gap: 0 30px ;
+  gap: 0 30px;
 }
 .slider__logos .slider__avva {
- padding: 5px;
- background-color: #fff;
- border-radius: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 10px;
 }
-
 
 .slider__item {
   transform: scale(1);
   position: relative;
   bottom: -50px;
+}
+
+@media (max-width: 590px) {
+  .slider__body p {
+    display: none;
+  }
+  .slider__logos {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: -92px;
+  }
 }
