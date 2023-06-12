@@ -42,7 +42,7 @@ function PracticeAreas() {
         {area.map((item) => {
           return (
             <NavLink
-              to={item.url && item.url}
+              to={item.url && '/practice-areas'+ item.url}
               key={item.id}
               className={item.url? "practiceAreas__link": "practiceAreas__link disable"}
               onClick={(e)=> getSublink(e)}

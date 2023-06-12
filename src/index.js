@@ -62,55 +62,55 @@ const appRouter = createBrowserRouter([
         element: <ContactUs />
       },
       {
-        path:'/speeding-tickets',
+        path:'/practice-areas/speeding-tickets',
         element:<SpeedingTickets />
       },
       {
-        path: "/sell-phone-tickets",
+        path: "/practice-areas/sell-phone-tickets",
         element:<SellPhoneTickets />
       },
       {
-        path: "/make-over-law",
+        path: "/practice-areas/make-over-law",
         element:<MakeOverLaw />
       },
       {
-        path: "/cdl",
+        path: "/practice-areas/cdl",
         element: <CDL />
       },
       {
-        path: "/junior-license",
+        path: "/practice-areas/junior-license",
         element:<JuniorLicense />
       },
       {
-        path: "/driving-without",
+        path: "/practice-areas/driving-without",
         element:<DrivingWithout />
       },
       {
-        path: "/suspended-revoked",
+        path: "/practice-areas/suspended-revoked",
         element:<SuspendedRevoked />
       },
       {
-        path: "/driving-without-traffic",
+        path: "/practice-areas/driving-without-traffic",
         element:<DrivingWithoutTraffic />
       },
       {
-        path: "/failure-to-appear",
+        path: "/practice-areas/failure-to-appear",
         element:<FailureToAppear />
       },
       {
-        path: "/failure-to-file",
+        path: "/practice-areas/failure-to-file",
         element:<FailureToFile />
       },
       {
-        path: "/failure-to-pay",
+        path: "/practice-areas/failure-to-pay",
         element:<FailureToPay />
       },
       {
-        path: "/fault-in-car-accident",
+        path: "/practice-areas/fault-in-car-accident",
         element:<FaultInAFatalCarAccident />
       },
       {
-        path: "/violating-court-judgment",
+        path: "/practice-areas/violating-court-judgment",
         element:<ViolatingCourtJudgment />
       },
     ]
