@@ -16,6 +16,16 @@
   gap: 0 70px;
 
 }
+.imageBannerText__img {
+  width: 500px;
+  height: 844px;
+}
+.imageBannerText__img img {
+  width: 100%;
+}
+.imageBannerText__content {
+  width: 600px;
+}
 .imageBannerText__wrapper.reverse {
   flex-direction: row-reverse;
 }

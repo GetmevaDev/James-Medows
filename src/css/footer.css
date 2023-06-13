@@ -5,9 +5,42 @@
 
 .footer__body {
   position: relative;
-  padding-top: 95px;
+  padding-top: 157px;
 }
+.footer__location {
+  margin-top: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.location__wrapper {
+  display: flex;
+  gap: 0 80px;
+}
+.location__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location__text {
+  margin-left: 15px;
+}
+.location__text h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.274286px;
 
+  color: #ffffff;
+}
+.location__text p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.274286px;
+
+  color: #ffffff;
+}
 .footer__logo {
   position: absolute;
   top: -25%;
@@ -21,13 +54,15 @@
   justify-content: center;
 }
 
-.footer__nav {
+/* .footer__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 .footer__list {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer .nav__link {
   color: #ffffff;
@@ -49,73 +84,125 @@
 .foooter__rights {
   margin-top: 30px;
   border-top: 1px solid #3396e3;
-  padding: 20px 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 32px 0 42px;
 }
 .foooter__rights .rights {
   font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-
+  text-align: center;
   color: #ffffff;
 }
-.footer__company {
-  display: flex;
+.important-notice {
+  background-color: #0086ed;
+  padding: 30px 0;
 }
-.footer__company p {
-  margin-left: 17px;
-  font-family: var(--secondary-font);
-  font-weight: 400;
+.important-notice h3 {
+  font-weight: 700;
   font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.274286px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.important-notice p {
+  font-weight: 500;
+  font-size: 14px;
   line-height: 20px;
-  text-align: right;
+  text-align: center;
 
   color: #ffffff;
 }
-.footer__company p a {
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+}
+.footer__bottom .bottom__link {
+  margin-right: 18px;
   font-family: var(--secondary-font);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: right;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration-line: underline;
 
-  color: #bca667;
+  color: #ffffff;
 }
-
-@media (max-width:768px) {
+.footer__bottom p {
+  margin-left: 30px;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.footer__bottom .gm {
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
   .footer__list {
     display: none;
   }
-  .footer__logo  {
+  .footer__logo {
     height: 150px;
     left: 30%;
   }
-  .footer__nav {
-    justify-content: center;
-  }
+  .footer__location {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-@media (max-width:590px) {
-  .footer__logo  {
+.location__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+}
+.footer__body {
+  padding-top: 100px;
+}
+.footer__logos {
+  margin-top: 20px;
+  display: flex;
+  gap: 0 40px;
+}
+}
+@media (max-width: 590px) {
+  .footer__logo {
     left: 23%;
   }
-  .foooter__rights {
+
+}
+@media (max-width: 490px) {
+  .footer__bottom {
     flex-direction: column;
+    align-items: start;
   }
-  .foooter__rights .rights {
-    margin-bottom: 10px;
+  .footer__bottom p {
+    margin-left: 0;
+    margin-top: 15px;
+
+  }
+  .footer__logo {
+    display: none;
+  }
+  .location__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px 0;
+  }
+  .footer__body {
+    padding-top: 50px;
   }
 }
-@media (max-width:490px) {
-  .footer__logo  {
-    left: 15%;
-  }
-}
-@media (max-width:425px) {
-  .footer__logo  {
-    left: 6%;
-  }
+@media (max-width: 425px) {
+  
 }

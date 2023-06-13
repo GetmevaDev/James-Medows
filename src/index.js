@@ -27,6 +27,9 @@ import FailureToFile from "./pages/FailureToFile";
 import FailureToPay from "./pages/FailureToPay";
 import FaultInAFatalCarAccident from "./pages/FaultInAFatalCarAccident";
 import ViolatingCourtJudgment from "./pages/ViolatingCourtJudgment";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import AccessibilityPolicy from "./pages/AccessibilityPolicy";
 
 
 
@@ -42,7 +45,7 @@ const appRouter = createBrowserRouter([
         element: <Home />
       },
       {
-        path:"/about",
+        path:"/about-us",
         element:<About />
       },
       {
@@ -61,6 +64,19 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <ContactUs />
       },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />
+      },
+      {
+        path: "/terms-conditions",
+        element: <TermsConditions />
+      },
+      {
+        path: "/accessibility-policy",
+        element: <AccessibilityPolicy />
+      },
+
       {
         path:'/practice-areas/speeding-tickets',
         element:<SpeedingTickets />

@@ -70,7 +70,7 @@ function Header() {
                 </NavLink>
               </li>
               <li className="list__item">
-                <NavLink to="/about" className="nav__link" onClick={(e)=> getLinkText(e)}>
+                <NavLink to="/about-us" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   About Us
                 </NavLink>
               </li>
@@ -109,7 +109,7 @@ function Header() {
                 </NavLink>
               </li>
               <li className="modal--list__item">
-                <NavLink  to="/about" className="nav__link" onClick={(e)=> getLinkText(e)}>
+                <NavLink  to="/about-us" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   About Us
                 </NavLink>
               </li>
