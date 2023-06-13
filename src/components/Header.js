@@ -79,7 +79,7 @@ function Header() {
                   Practice Areas
                 </NavLink>
               </li>
-               <li className="list__item">
+               {/* <li className="list__item">
                 <NavLink to="/courts-we-cover" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Courts We Cover
                 </NavLink>
@@ -93,7 +93,7 @@ function Header() {
                 <NavLink to="/contact" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Contact Us
                 </NavLink>
-              </li> 
+              </li>  */}
             </ul>
           </nav>
           <div className='burger' onClick={changeMind}>
@@ -118,7 +118,7 @@ function Header() {
                   Practice Areas
                 </NavLink>
               </li>
-               <li className="modal--list__item">
+               {/* <li className="modal--list__item">
                 <NavLink  to="/courts-we-cover" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Courts We Cover
                 </NavLink>
@@ -132,7 +132,7 @@ function Header() {
                 <NavLink  to="/contact" className="nav__link" onClick={(e)=> getLinkText(e)}>
                   Contact Us
                 </NavLink>
-              </li> 
+              </li>  */}
             </ul>
           </div>
         </div>

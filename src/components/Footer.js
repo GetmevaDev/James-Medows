@@ -40,7 +40,7 @@ function Footer() {
                   Practice Areas
                 </NavLink>
               </li>
-              <li className="list__item">
+              {/* <li className="list__item">
                 <NavLink to="/courts-we-cover" className="nav__link">
                   Courts We Cover
                 </NavLink>
@@ -54,7 +54,7 @@ function Footer() {
                 <NavLink to="/contact" className="nav__link">
                   Contact Us
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
 
             <div className="footer__logos">
