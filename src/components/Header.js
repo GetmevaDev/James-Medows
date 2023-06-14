@@ -44,11 +44,15 @@ function Header() {
   }
   
   function changeNav() {
-    if(window.scrollY >10){
-      setIsScroll(true)
-    }else {
-      setIsScroll(false)
-    }
+  
+      const scrollY = window.scrollY;
+      if(scrollY >1){
+        setIsScroll(true)
+      }else {
+        setIsScroll(false)
+      }
+  
+    
   }
 
   window.addEventListener("scroll", changeNav)

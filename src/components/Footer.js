@@ -96,8 +96,8 @@ function Footer() {
        
       <div className="footer__bottom">
             
-        <Link to="/privacy-policy" className="bottom__link">Privacy Policy</Link>
-        <Link to="/terms-conditions" className="bottom__link">Terms and Conditions</Link>
+        <Link to="/privacy-policy" className="bottom__link">Privacy Policy | Terms and Conditions</Link>
+        {/* <Link to="/terms-conditions" className="bottom__link">Terms and Conditions</Link> */}
         <Link to="/accessibility-policy" className="bottom__link">Accessibility Policy and Commitment Statement</Link>
         <p>  This website is attorney advertising and is administered by 
           <a className="gm"  href="https://robertgerov.com/">Robert Gerov Media</a>
