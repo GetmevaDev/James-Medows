@@ -30,6 +30,7 @@ import ViolatingCourtJudgment from "./pages/ViolatingCourtJudgment";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import AccessibilityPolicy from "./pages/AccessibilityPolicy";
+import CDLHoldersGuide from "./pages/CDLHoldersGuide";
 
 
 
@@ -50,7 +51,8 @@ const appRouter = createBrowserRouter([
       },
       {
         path:"/practice-areas",
-       element: <PracticeAreas />
+       element: <PracticeAreas />,
+       
       },
       {
         path: "/courts-we-cover",
@@ -128,6 +130,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/practice-areas/violating-court-judgment",
         element:<ViolatingCourtJudgment />
+      },
+      {
+        path: "/practice-areas/CDL-holders-guide",
+        element:<CDLHoldersGuide />
       },
     ]
   }

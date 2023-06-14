@@ -20,7 +20,6 @@ function SellPhoneTickets() {
       "https://cms-james-medows.herokuapp.com/api/cell-phone-tickets-page?populate=deep"
     );
     const json = await data.json();
-    console.log(json);
     const { Banner, ImageBanner, BlockGray, BlockWhite } = json.data.attributes;
 
     setBanner(Banner);

@@ -26,7 +26,6 @@ function PracticeAreas() {
   if (area.length === 0) return null;
 
   function getSublink(e){
-    console.log(e.target.textContent);
     dispatch(getSubLink(e.target.textContent))
   }
   return (

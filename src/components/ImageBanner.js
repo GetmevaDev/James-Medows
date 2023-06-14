@@ -11,7 +11,7 @@ function ImageBanner({title, description, img, altText}) {
           </div>
           <div className='imageBanner__content'>            
             {title && <ReactMarkdown>{title}</ReactMarkdown>}
-            <p>{description}</p>
+            <ReactMarkdown>{description}</ReactMarkdown>  
           </div>
         </div>   
       </div>     
