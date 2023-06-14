@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Loader from './components/Loader';
 import { useDispatch } from 'react-redux';
 import { homePageData } from './utils/pages';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const dispatch = useDispatch()
@@ -31,11 +32,11 @@ function App() {
     <div className="App">
       {!data ? <Loader /> : (
        
-        <>
+        <ScrollToTop>
         <Header />
           <Outlet />  
         <Footer /> 
-        </>
+        </ScrollToTop>
       )}
       
     </div>
