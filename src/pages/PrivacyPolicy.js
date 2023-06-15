@@ -17,7 +17,6 @@ function PrivacyPolicy() {
       "https://cms-james-medows.herokuapp.com/api/privacy-policy-page?populate=deep"
     );
     const json = await data.json();
-    console.log(json);
     const { description, description_2, banner } = json.data.attributes;
     setDesc1(description);
     setDesc2(description_2);

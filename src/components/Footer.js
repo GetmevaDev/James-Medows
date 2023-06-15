@@ -4,11 +4,17 @@ import { Link, NavLink } from "react-router-dom";
 import avvo2015 from "../images/avvo2015.png";
 import avvo2023 from "../images/avvo2023.png";
 import location_icon from "../images/location.webp";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getCurrentPage } from "../utils/pages";
 function Footer() {
+  const dispatch = useDispatch()
   const logo = useSelector((store) => store.pagesData.logo);
   if (logo.length === 0) return null;
 
+  function getLinkText(e){
+    dispatch(getCurrentPage(e.target.textContent))
+    
+  }
   return (
     <footer className="footer ">
       <div className="container">
@@ -96,14 +102,16 @@ function Footer() {
        
       <div className="footer__bottom">
             
-        <Link to="/privacy-policy" className="bottom__link">Privacy Policy | Terms and Conditions</Link>
+        <Link to="/privacy-policy" className="bottom__link" onClick={(e)=> getLinkText(e)}>Privacy Policy | Terms and Conditions</Link>
         {/* <Link to="/terms-conditions" className="bottom__link">Terms and Conditions</Link> */}
-        <Link to="/accessibility-policy" className="bottom__link">Accessibility Policy and Commitment Statement</Link>
+        <Link to="/accessibility-policy" className="bottom__link" onClick={(e)=> getLinkText(e)}>Accessibility Policy and Commitment Statement</Link>
         <p>  This website is attorney advertising and is administered by 
           <a className="gm"  href="https://robertgerov.com/">Robert Gerov Media</a>
         </p>
       </div>
       </div> 
+
+      <a href="tel: 917-856-1247" className="footer-sticky-call-btn">CALL US</a>
     </footer>
   );
 }

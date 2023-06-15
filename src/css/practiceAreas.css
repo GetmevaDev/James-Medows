@@ -55,4 +55,7 @@
 .practiceAreas__link  {
   height: 170px;
 }
+.practiceAreas .g-hero h1 {
+  width: 255px;
+}
 }

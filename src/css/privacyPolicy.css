@@ -23,3 +23,41 @@
   list-style: disc;
   margin-bottom: 10px;
 }
+
+/* ACCESSIBILTY PAGE */
+.accessibility-description {
+  padding: 100px 0;
+}
+
+@media (max-width:1024px) {
+  .accessibility .g-hero h1 {
+    font-size: 80px;
+  }
+  .accessibility-description {
+  padding: 80px 0;
+
+  }
+}
+@media (max-width:768px) {
+  .accessibility .g-hero h1 {
+    font-size: 60px;
+  }
+  .accessibility-description {
+    padding: 40px 0;
+  
+    }
+}
+@media (max-width:590px) {
+  .accessibility .g-hero h1 {
+    font-size: 50px;
+  }
+  .accessibility-description {
+    padding: 20px 0 40px;
+  
+    }
+}
+@media (max-width:425px) {
+  .accessibility .g-hero h1 {
+    font-size: 40px;
+  }
+}

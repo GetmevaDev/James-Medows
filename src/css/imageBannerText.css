@@ -56,3 +56,9 @@
 }
  
 }
+@media (max-width:620px) {
+  .imageBannerText__content {
+    width: 95%;
+  }
+ 
+}

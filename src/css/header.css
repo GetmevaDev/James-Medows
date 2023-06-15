@@ -19,10 +19,10 @@
   transition: 0.3s ease-in-out;
 
 }
-.header__nav.min {
+/* .header__nav.min {
   padding: 27px 0 ;
   transition: 0.3s ease-in-out;
-}
+} */
 .nav__list {
   display: flex;
   align-items: center;
@@ -60,11 +60,11 @@
   transition: 0.3s ease-in-out;
 
 }
-.header__logo.min{
+/* .header__logo.min{
   height: 90px;
   transition: 0.3s ease-in-out;
   background-color: #ebebeb;
-}
+} */
 .header__logo a img {
   width: 100%;
   height: 100%;
