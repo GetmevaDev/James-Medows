@@ -7,9 +7,8 @@ import "../css/hero.css";
 function Hero({ title, subtitle, btn, btn_link, bg_img, call_us }) {
   const [isLoading, setIsLoading] = useState(false);
 
-  const [values, setValues] = useState({
-    phoneNumber: "",
-  });
+  const [phoneNumber, setPhoneNumber] = useState("");
+
   const [status, setStatus] = useState("");
 
   const handleSubmit = (e) => {
@@ -22,15 +21,13 @@ function Hero({ title, subtitle, btn, btn_link, bg_img, call_us }) {
       .send(
         "service_ok9prgn",
         "template_ht0bvkp",
-        values,
+        { phoneNumber },
         "user_iw2a3XOS7O7HrGbR8S31M"
       )
       .then(
         (response) => {
           console.log("SUCCESS!", response);
-          setValues({
-            phoneNumber: "",
-          });
+          setPhoneNumber("");
           setStatus("SUCCESS");
         },
         (error) => {
@@ -47,11 +44,29 @@ function Hero({ title, subtitle, btn, btn_link, bg_img, call_us }) {
     }
   }, [status]);
 
-  const handleChange = (e) => {
-    setValues((values) => ({
-      ...values,
-      [e.target.name]: e.target.value,
-    }));
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    const formattedValue = formatPhoneNumber(inputValue);
+    setPhoneNumber(formattedValue);
+  };
+
+  const formatPhoneNumber = (value) => {
+    const cleanedValue = value.replace(/\D/g, "");
+    const match = cleanedValue.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+    if (match) {
+      let formattedValue = "";
+      if (match[1]) {
+        formattedValue += "(" + match[1];
+      }
+      if (match[2]) {
+        formattedValue += ") " + match[2];
+      }
+      if (match[3]) {
+        formattedValue += "-" + match[3];
+      }
+      return formattedValue;
+    }
+    return cleanedValue;
   };
   return (
     <section className="hero" style={{ backgroundImage: `url(${bg_img})` }}>
@@ -76,11 +91,11 @@ function Hero({ title, subtitle, btn, btn_link, bg_img, call_us }) {
               <label htmlFor="phone">Enter your phone number</label>
 
               <input
-                type="text"
+                type="tel"
                 id="phone"
                 name="phoneNumber"
-                value={values.phoneNumber}
-                onChange={handleChange}
+                value={phoneNumber}
+                onChange={handleInputChange}
               />
 
               <button
