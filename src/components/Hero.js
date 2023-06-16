@@ -20,7 +20,7 @@ function Hero({ title, subtitle, btn, btn_link, bg_img, call_us }) {
     }, 2000);
     emailjs
       .send(
-        "service_mw3qmm3",
+        "service_ok9prgn",
         "template_ht0bvkp",
         values,
         "user_iw2a3XOS7O7HrGbR8S31M"
