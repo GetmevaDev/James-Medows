@@ -5,7 +5,7 @@ import "../css/practiceAreas.css";
 import { useDispatch } from "react-redux";
 import { getSubLink } from "../utils/pages";
 function PracticeAreas() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [banner, setBanner] = useState(null);
   const [area, setArea] = useState([]);
   useEffect(() => {
@@ -25,33 +25,36 @@ function PracticeAreas() {
   if (!banner) return null;
   if (area.length === 0) return null;
 
-  function getSublink(e){
-    dispatch(getSubLink(e.target.textContent))
+  function getSublink(e) {
+    dispatch(getSubLink(e.target.textContent));
   }
   return (
     <main className="practiceAreas">
       <GeneralHero
         title={banner.title}
+        sub="Practice areas"
         bg_img={banner.bg_image.data.attributes.url}
       />
       <div className="container">
-              
-          
-      <section className="practiceAreas__grid">
-        {area.map((item) => {
-          return (
-            <NavLink
-              to={item.url && '/practice-areas'+ item.url}
-              key={item.id}
-              className={item.url? "practiceAreas__link": "practiceAreas__link disable"}
-              onClick={(e)=> getSublink(e)}
-            >
-              {item.text}
-            </NavLink>
-          );
-        })}
-      </section>
-      </div> 
+        <section className="practiceAreas__grid">
+          {area.map((item) => {
+            return (
+              <NavLink
+                to={item.url && "/practice-areas" + item.url}
+                key={item.id}
+                className={
+                  item.url
+                    ? "practiceAreas__link"
+                    : "practiceAreas__link disable"
+                }
+                onClick={(e) => getSublink(e)}
+              >
+                {item.text}
+              </NavLink>
+            );
+          })}
+        </section>
+      </div>
     </main>
   );
 }

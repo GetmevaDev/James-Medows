@@ -22,7 +22,7 @@ function GeneralHero({ title, bg_img }) {
           </Link>
           <p className={sublink ? "previous" : "current"}>
             {!sublink ? currentPage : "Practice Areas"}
-           {sublink && <span className="arrow">»</span>}
+            {sublink && <span className="arrow">»</span>}
           </p>
           {sublink && <p className="current">{sublink}</p>}
         </div>
