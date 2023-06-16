@@ -8,11 +8,11 @@ import ImageBannerText from "../components/ImageBannerText";
 import ContactUs from "../components/ContactUs";
 import slider_bg from "../images/slider_bg.jpg";
 import { useSelector } from "react-redux";
+import SEO from "../components/SEO";
 
 
 function Home() {
   const json = useSelector((store) => store.pagesData.homePage);
-
   const [banner, setBanner] = useState(null);
   const [chooseUs, setChooseUs] = useState(null);
   const [ourProfiles, setOurProfiles] = useState(null);
@@ -20,6 +20,7 @@ function Home() {
   const [faq, setFaq] = useState(null);
   const [imageBannerText, setImageBannerText] = useState(null);
   const [contactUs, setContactUs] = useState(null);
+  const [seo, setSeo] = useState(null);
 
   
 
@@ -34,6 +35,7 @@ function Home() {
         FAQ,
         ImageBannerText,
         ContactUs,
+        seo
       } = json.data.attributes;
   
       setBanner(Banner);
@@ -43,12 +45,12 @@ function Home() {
       setFaq(FAQ);
       setImageBannerText(ImageBannerText);
       setContactUs(ContactUs);
+      setSeo(seo)
     }
    
     getData();
   }, [json]);
  
-
   // check data
   if (!banner) return null;
   if (!chooseUs) return null;
@@ -57,9 +59,12 @@ function Home() {
   if (!faq) return null;
   if (!imageBannerText) return null;
   if (!contactUs) return null;
+  if (!seo) return null;
+  
   return (
     
     <main className="home">
+      <SEO title={seo.title} description={seo.description}/>
       <Hero
         title={banner.title}
         subtitle={banner.sub_title}

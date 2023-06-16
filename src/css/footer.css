@@ -147,10 +147,10 @@
   color: #ffffff;
 }
 .footer-sticky-call-btn {
-  color: var(--primary-color);
+  color:#ffffff;
   width: 100%;
   padding:  12px 0;
-  background-color: #ffffff;
+  background-color: var(--primary-color) ;
 
   display: flex;
   align-items: center;
@@ -165,8 +165,8 @@
 
 }
 .footer-sticky-call-btn:hover {
-  color: #ffffff;
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color:#ffffff ;
   transition: 300ms;
 }
 @media (max-width: 768px) {

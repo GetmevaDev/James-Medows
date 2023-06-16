@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import GeneralHero from "../components/GeneralHero";
 import ImageBanner from "../components/ImageBanner";
 import ImageBannerText from "../components/ImageBannerText";
+import SEO from "../components/SEO";
+
 
 function About() {
 
@@ -9,6 +11,8 @@ function About() {
   const [imgBanner, setImgBanner] = useState(null);
   const [blockGray, setBlockGray] = useState(null);
   const [blockWhite, setBlockWhite] = useState(null);
+  const [seo, setSeo] = useState(null);
+
   useEffect(() => {
     getAboutPageData();
   }, []);
@@ -18,20 +22,26 @@ function About() {
       "https://cms-james-medows.herokuapp.com/api/about-us-page?populate=deep"
     );
     const json = await data.json();
-    const { Banner, ImageBanner, BlockGray, BlockWhite } = json.data.attributes;
+    const { Banner, ImageBanner, BlockGray, BlockWhite, seo } = json.data.attributes;
     setBanner(Banner);
     setImgBanner(ImageBanner);
     setBlockGray(BlockGray);
     setBlockWhite(BlockWhite)
+    setSeo(seo)
+
   }
   // check data
   if (!banner) return null;
   if (!imgBanner) return null;
   if (!blockGray) return null;
   if (!blockWhite) return null;
+  if (!seo) return null;
+
   return (
    
     <main className="about">
+      <SEO title={seo.title} description={seo.description}/>
+
       <GeneralHero
         title={banner.title}
         bg_img={banner.bg_image.data.attributes.url}
