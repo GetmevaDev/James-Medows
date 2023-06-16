@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/contactUs.css'
+import "../css/contactUs.css";
 import phone_icon from "../images/telephone.svg";
 import email_icon from "../images/email.svg";
 import gps_icon from "../images/gps.svg";
@@ -9,14 +9,16 @@ function ContactUs({ title, phone, address, email, map }) {
     <section className="contactUs">
       <div className="container">
         <div className="contactUs__wrapper">
-
           <div className="contactUs__content">
             <h2>{title}</h2>
             <ul>
               <li>
                 <img src={phone_icon} alt="phone" />
                 <p>
-                  Call Us: <span className="phone-bold">{phone}</span>
+                  Call Us:
+                  <a className="phone-bold" href={`tel:${phone}`}>
+                    {phone}
+                  </a>
                 </p>
               </li>
               <li>
@@ -43,7 +45,6 @@ function ContactUs({ title, phone, address, email, map }) {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-         
         </div>
       </div>
     </section>
