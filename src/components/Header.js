@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../css/header.css";
 import { useDispatch } from "react-redux";
-import { getCurrentPage, getSubLink, logoData } from "../utils/pages";
+import { footerData, getCurrentPage, getSubLink } from "../utils/pages";
 
 function Header() {
   const dispatch = useDispatch()
-  const [logoInfo, setLogoInfo] = useState([]);
+  const [headerInfo, setHeaderInfo] = useState(null);
   const[isOpen, setIsOpen]=useState(true)
   const[isScroll, setIsScroll]= useState(false)
   // changeMind function is for MODAL
@@ -18,24 +18,24 @@ function Header() {
     setIsOpen(true)
   }
   useEffect(() => {
-    async function getLogo() {
+    async function getData() {
       let data = await fetch(
-        "https://cms-james-medows.herokuapp.com/api/logos?populate=deep"
+        "https://cms-james-medows.herokuapp.com/api/layout?populate=deep"
       );
-      let logo = await data.json();
-      const {
-        alternativeText,
-        url,
-      } = logo.data[0].attributes.Logo.data.attributes;
-      setLogoInfo([alternativeText, url]);
-      dispatch(logoData([alternativeText, url])) 
-
+      let json = await data.json();
+      const {Header, Footer} = json.data.attributes
+  
+      dispatch(footerData(Footer))
+      setHeaderInfo(Header)
+  
       
     }
-    getLogo();
+    
+    getData();
   }, [dispatch]);
+ 
 
-  if(logoInfo.length ===0) return null
+
   // this getLinkText function is for BREADCRUMBS
   function getLinkText(e){
     dispatch(getCurrentPage(e.target.textContent))
@@ -56,48 +56,30 @@ function Header() {
   }
 
   window.addEventListener("scroll", changeNav)
-
+  // check data (early return)
+  if(!headerInfo) return null
   return (
     <header className={isScroll ?"header min":"header"}>
       <div className="container">
         <div className="header__grid">
           <div className={isScroll ? "header__logo min":"header__logo"}>
             <Link to="/">
-              <img loading="lazy" src={logoInfo[1]} alt={logoInfo[0]} />
+              <img loading="lazy" src={headerInfo.Logo.data.attributes.url} alt={headerInfo.Logo.data.attributes.alternativeText} />
             </Link>
           </div>
           <nav className={isScroll? "header__nav min" : "header__nav" }>
             <ul className= "nav__list" >
-              <li className="list__item">
-                <NavLink to="/" className="nav__link">
-                  Home
-                </NavLink>
-              </li>
-              <li className="list__item">
-                <NavLink to="/about-us" className="nav__link" onClick={(e)=> getLinkText(e)}>
-                  About Us
-                </NavLink>
-              </li>
-              <li className="list__item">
-                <NavLink to="/practice-areas" className="nav__link" onClick={(e)=> getLinkText(e)}>
-                  Practice Areas
-                </NavLink>
-              </li>
-               {/* <li className="list__item">
-                <NavLink to="/courts-we-cover" className="nav__link" onClick={(e)=> getLinkText(e)}>
-                  Courts We Cover
-                </NavLink>
-              </li>
-              <li className="list__item">
-                <NavLink to="/reviews" className="nav__link" onClick={(e)=> getLinkText(e)}>
-                  Reviews
-                </NavLink>
-              </li>
-              <li className="list__item">
-                <NavLink to="/contact" className="nav__link" onClick={(e)=> getLinkText(e)}>
-                  Contact Us
-                </NavLink>
-              </li>  */}
+              {headerInfo.HeaderItem.map(item=>{
+                return(
+                  <li className="list__item" key={item.id}>
+                  <NavLink to={item.link} className="nav__link" onClick={(e)=> getLinkText(e)}>
+                    {item.name}
+                  </NavLink>
+                </li>
+                )
+              })}
+            
+              
             </ul>
           </nav>
           <div className='burger' onClick={changeMind}>

@@ -9,6 +9,7 @@ import ContactUs from "../components/ContactUs";
 import slider_bg from "../images/slider_bg.jpg";
 import { useSelector } from "react-redux";
 import SEO from "../components/SEO";
+import { useLocation } from "react-router-dom";
 
 
 function Home() {
@@ -22,7 +23,8 @@ function Home() {
   const [contactUs, setContactUs] = useState(null);
   const [seo, setSeo] = useState(null);
 
-  
+  const location = useLocation()
+  console.log(location.pathname);
 
   useEffect(() => {
     function getData() {    

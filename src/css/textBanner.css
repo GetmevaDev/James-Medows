@@ -8,6 +8,13 @@
   padding-left: 30px;
   border-left: 16px solid var(--primary-color);
 }
+.textBanner__desc h4 {
+  margin:20px 0 10px ;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: #343434;
+}
 .textBanner__desc ul {
   margin: 25px 0;
 }
@@ -21,17 +28,17 @@
   color: #343434;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .textBnner {
     padding: 50px 0;
-}
+  }
 }
 
-@media (max-width:590px) {
+@media (max-width: 590px) {
   .textBanner__desc {
     margin-top: 30px;
-    
+
     border: 0;
     padding: 0;
-}
+  }
 }

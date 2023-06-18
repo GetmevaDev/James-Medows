@@ -30,6 +30,14 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import AccessibilityPolicy from "./pages/AccessibilityPolicy";
 import CDLHoldersGuide from "./pages/CDLHoldersGuide";
+import CDLLongbookViolations from "./pages/CDLLongbookViolations";
+import CDLOverweightViolations from "./pages/CDLOverweightViolations";
+import CDLSuspensionsAndDisqualifications from "./pages/CDLSuspensionsAndDisqualifications";
+import NYTRafficTicketsAndCSAScores from "./pages/NYTrafficTicketsAndCSAScores";
+import LeavingSceneOfAccidnet from "./pages/LeavingSceneOfAccident";
+import RecklessDrivingLawyer from "./pages/RecklessDrivingLawyer";
+import DrivingWhileSuspended from "./pages/DrivingWhileSuspended";
+import DWI from "./pages/DWI";
 
 const appRouter = createBrowserRouter([
   {
@@ -129,6 +137,38 @@ const appRouter = createBrowserRouter([
       {
         path: "/practice-areas/cdl-holders-guide-to-fmcsas-dsms",
         element: <CDLHoldersGuide />,
+      },
+      {
+        path: "/practice-areas/cdl-longbook-violations-in-ny",
+        element: <CDLLongbookViolations />,
+      },
+      {
+        path: "/practice-areas/cdl-overweight-violations-in-ny",
+        element: <CDLOverweightViolations />,
+      },
+      {
+        path: "/practice-areas/cdl-suspensions-and-disqualifications-in-ny",
+        element: <CDLSuspensionsAndDisqualifications />,
+      },
+      {
+        path: "/practice-areas/ny-traffic-tickets-and-csa-scores",
+        element: <NYTRafficTicketsAndCSAScores />,
+      },
+      {
+        path: "/practice-areas/leaving-scene-of-accident-in-ny",
+        element: <LeavingSceneOfAccidnet />,
+      },
+      {
+        path: "/practice-areas/reckless-driving-lawyer-in-ny",
+        element: <RecklessDrivingLawyer />,
+      },
+      {
+        path: "/practice-areas/driving-while-suspended-in-ny",
+        element: <DrivingWhileSuspended/>,
+      },
+      {
+        path: "/practice-areas/dwi-in-ny",
+        element: <DWI/>,
       },
     ],
   },

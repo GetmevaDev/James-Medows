@@ -4,7 +4,6 @@
 .imageBanner__grid {
   display: flex;
   gap: 0 70px;
-  align-items: center;
 }
 .imageBanner__content h4 {
   font-weight: 500;
@@ -13,6 +12,14 @@
   color: var(--primary-color);
 }
 .imageBanner__content h2 {
+  margin-bottom: 10px;
+}
+.imageBanner__content ul {
+  margin:20px 0 20px 30px;
+
+}
+.imageBanner__content ul li{
+  list-style: disc;
   margin-bottom: 10px;
 }
 

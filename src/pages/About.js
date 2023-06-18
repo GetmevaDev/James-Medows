@@ -3,10 +3,12 @@ import GeneralHero from "../components/GeneralHero";
 import ImageBanner from "../components/ImageBanner";
 import ImageBannerText from "../components/ImageBannerText";
 import SEO from "../components/SEO";
+import { useLocation } from "react-router-dom";
 
 
 function About() {
-
+  const location =  useLocation()
+  console.log(location.pathname);
   const [banner, setBanner] = useState(null);
   const [imgBanner, setImgBanner] = useState(null);
   const [blockGray, setBlockGray] = useState(null);
