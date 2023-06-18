@@ -67,3 +67,8 @@
  
 }
 } 
+@media (max-width:590px) {
+  .chooseUs__desc {    
+    margin-top: 120px;
+}
+}
