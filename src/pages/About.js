@@ -3,12 +3,12 @@ import GeneralHero from "../components/GeneralHero";
 import ImageBanner from "../components/ImageBanner";
 import ImageBannerText from "../components/ImageBannerText";
 import SEO from "../components/SEO";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 
 function About() {
-  const location =  useLocation()
-  console.log(location.pathname);
+  // const location =  useLocation()
+  // console.log(location.pathname);
   const [banner, setBanner] = useState(null);
   const [imgBanner, setImgBanner] = useState(null);
   const [blockGray, setBlockGray] = useState(null);
@@ -37,12 +37,25 @@ function About() {
   if (!imgBanner) return null;
   if (!blockGray) return null;
   if (!blockWhite) return null;
-  if (!seo) return null;
-
   return (
    
     <main className="about">
-      <SEO title={seo.title} description={seo.description}/>
+      <SEO
+        title={seo?.title}
+        description={seo?.description}
+        image={seo?.image}
+        type={seo?.type}
+        facebookUrl = {seo?.facebookUrl}
+        facebookTitle={seo?.facebookTitle}
+        facebookDescription={seo?.facebookDescription}
+        facebookImage={seo?.facebookImage}
+        twitterCard={seo?.twitterCard}
+        twitterDomain={seo?.twitterDomain}
+        twitterUrl={seo?.twitterUrl}
+        twitterTitle={seo?.twitterTitle}
+        twitterDescription={seo?.twitterDescription}
+        twitterImage={seo?.twitterImage}
+      />
 
       <GeneralHero
         title={banner.title}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,  useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../css/header.css";
 import { useDispatch } from "react-redux";
@@ -42,11 +42,10 @@ function Header() {
     dispatch(getSubLink(''))
     closeModal()
   }
-  
   function changeNav() {
   
       const scrollY = window.scrollY;
-      if(scrollY >1){
+      if(scrollY >100){
         setIsScroll(true)
       }else {
         setIsScroll(false)

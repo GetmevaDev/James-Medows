@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import ChooseUs from "../components/ChooseUs";
 import OurProfiles from "../components/OurProfile";
@@ -9,11 +9,11 @@ import ContactUs from "../components/ContactUs";
 import slider_bg from "../images/slider_bg.jpg";
 import { useSelector } from "react-redux";
 import SEO from "../components/SEO";
-import { useLocation } from "react-router-dom";
-
+// import { useLocation } from "react-router-dom";
 
 function Home() {
   const json = useSelector((store) => store.pagesData.homePage);
+
   const [banner, setBanner] = useState(null);
   const [chooseUs, setChooseUs] = useState(null);
   const [ourProfiles, setOurProfiles] = useState(null);
@@ -23,12 +23,11 @@ function Home() {
   const [contactUs, setContactUs] = useState(null);
   const [seo, setSeo] = useState(null);
 
-  const location = useLocation()
-  console.log(location.pathname);
+  // const location = useLocation()
+  // console.log(location.pathname);
 
   useEffect(() => {
-    function getData() {    
-
+    function getData() {
       const {
         Banner,
         Chooseus,
@@ -37,9 +36,9 @@ function Home() {
         FAQ,
         ImageBannerText,
         ContactUs,
-        seo
+        seo,
       } = json.data.attributes;
-  
+
       setBanner(Banner);
       setChooseUs(Chooseus);
       setOurProfiles(OutProfiles);
@@ -47,12 +46,12 @@ function Home() {
       setFaq(FAQ);
       setImageBannerText(ImageBannerText);
       setContactUs(ContactUs);
-      setSeo(seo)
+      setSeo(seo);
     }
-   
+
     getData();
   }, [json]);
- 
+
   // check data
   if (!banner) return null;
   if (!chooseUs) return null;
@@ -61,12 +60,24 @@ function Home() {
   if (!faq) return null;
   if (!imageBannerText) return null;
   if (!contactUs) return null;
-  if (!seo) return null;
-  
   return (
-    
     <main className="home">
-      <SEO title={seo.title} description={seo.description}/>
+      <SEO
+        title={seo?.title}
+        description={seo?.description}
+        image={seo?.image}
+        type={seo?.type}
+        facebookUrl = {seo?.facebookUrl}
+        facebookTitle={seo?.facebookTitle}
+        facebookDescription={seo?.facebookDescription}
+        facebookImage={seo?.facebookImage}
+        twitterCard={seo?.twitterCard}
+        twitterDomain={seo?.twitterDomain}
+        twitterUrl={seo?.twitterUrl}
+        twitterTitle={seo?.twitterTitle}
+        twitterDescription={seo?.twitterDescription}
+        twitterImage={seo?.twitterImage}
+      />
       <Hero
         title={banner.title}
         subtitle={banner.sub_title}
@@ -112,7 +123,6 @@ function Home() {
         map={contactUs.map}
       />
     </main>
-    
   );
 }
 
