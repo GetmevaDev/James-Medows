@@ -1,11 +1,17 @@
 import React from "react";
 import "../css/generalHero.css";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getSubLink } from "../utils/pages";
 
 function GeneralHero({ title, bg_img }) {
+  const dispatch  =useDispatch()
   const currentPage = useSelector((store) => store.pagesData.currentPage);
-  const sublink = useSelector((store) => store.pagesData.subLink);
+  let sublink = useSelector((store) => store.pagesData.subLink);
+  function removeSubLink(){
+      dispatch(getSubLink(""))
+
+  }
   return (
     <>
       <section className="g-hero" style={{ backgroundImage: `url(${bg_img})` }}>
@@ -21,7 +27,7 @@ function GeneralHero({ title, bg_img }) {
             Home <span className="arrow">»</span>
           </Link>
           <p className={sublink ? "previous" : "current"}>
-            {!sublink ? currentPage : "Practice Areas"}
+            {!sublink ? currentPage :<Link to= "/practice-areas" onClick={removeSubLink}>Practice Areas</Link> }
             {sublink && <span className="arrow">»</span>}
           </p>
           {sublink && <p className="current">{sublink}</p>}

@@ -38,10 +38,7 @@ function CDLHoldersGuide() {
         description={seo?.description}
         image={seo?.image}
         type={seo?.type}
-        facebookUrl = {seo?.facebookUrl}
-        facebookTitle={seo?.facebookTitle}
-        facebookDescription={seo?.facebookDescription}
-        facebookImage={seo?.facebookImage}
+        
         twitterCard={seo?.twitterCard}
         twitterDomain={seo?.twitterDomain}
         twitterUrl={seo?.twitterUrl}

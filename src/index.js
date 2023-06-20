@@ -123,7 +123,7 @@ const appRouter = createBrowserRouter([
         element: <FailureToFile />,
       },
       {
-        path: "/practice-areas/failure-to-pay",
+        path: "/practice-areas/failure-to-pay-child-support-in-ny",
         element: <FailureToPay />,
       },
       {

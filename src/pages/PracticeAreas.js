@@ -14,6 +14,10 @@ function PracticeAreas() {
   const [seo, setSeo] = useState(null)
   useEffect(() => {
     getPracticeAreasPageData();
+
+    
+
+   
   }, []);
 
   async function getPracticeAreasPageData() {
@@ -28,7 +32,6 @@ function PracticeAreas() {
   }
   // check data or early return
   if (!banner) return null;
-  if (!seo) return null;
   if (area.length === 0) return null;
 
   function getSublink(e) {
@@ -36,21 +39,18 @@ function PracticeAreas() {
   }
   return (
     <main className="practiceAreas">
-      <SEO
-        title={seo.title}
-        description={seo.description}
-        image={seo.image}
-        type={seo.type}
-        facebookUrl = {seo.facebookUrl}
-        facebookTitle={seo.facebookTitle}
-        facebookDescription={seo.facebookDescription}
-        facebookImage={seo.facebookImage}
-        twitterCard={seo.twitterCard}
-        twitterDomain={seo.twitterDomain}
-        twitterUrl={seo.twitterUrl}
-        twitterTitle={seo.twitterTitle}
-        twitterDescription={seo.twitterDescription}
-        twitterImage={seo.twitterImage}
+       <SEO
+        title={seo?.title}
+        description={seo?.description}
+        image={seo?.image}
+        type={seo?.type}
+        
+        twitterCard={seo?.twitterCard}
+        twitterDomain={seo?.twitterDomain}
+        twitterUrl={seo?.twitterUrl}
+        twitterTitle={seo?.twitterTitle}
+        twitterDescription={seo?.twitterDescription}
+        twitterImage={seo?.twitterImage}
       />
       <GeneralHero
         title={banner.title}
