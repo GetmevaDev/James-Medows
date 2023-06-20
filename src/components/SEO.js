@@ -6,10 +6,7 @@ function SEO({
   description,
   image,
   type,
-  facebookUrl,
-  facebookTitle,
-  facebookDescription,
-  facebookImage,
+  
   twitterCard,
   twitterDomain,
   twitterUrl,
@@ -27,14 +24,7 @@ function SEO({
       {image && <meta property="og:image" content={image} />}
       {type && <meta property="og:type" content={type} />}
 
-      {/* Facebook Meta Tags  */}
-
-      {facebookUrl && <meta property="og:url" content={facebookUrl} />}
-      {facebookTitle && <meta property="og:title" content={facebookTitle} />}
-      {facebookDescription && (
-        <meta property="og:description" content={facebookDescription} />
-      )}
-      {facebookImage && <meta property="og:image" content={facebookImage} />}
+     
 
       
 

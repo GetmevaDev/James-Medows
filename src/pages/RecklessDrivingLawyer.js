@@ -3,6 +3,8 @@ import GeneralHero from '../components/GeneralHero';
 import ImageBanner from '../components/ImageBanner';
 import TextBanner from '../components/TextBanner';
 import BlockImageText from '../components/BlockImageText';
+import SEO from "../components/SEO";
+
 
 
 function RecklessDrivingLawyer() {
@@ -10,6 +12,8 @@ function RecklessDrivingLawyer() {
   const [imgBanner, setImgBanner] = useState(null);
   const [blockGray, setBlockGray] = useState(null);
   const [blockWhite, setBlockWhite] = useState(null);
+  const [seo, setSeo] = useState(null);
+
   useEffect(()=> {
     getPageData()
   }, [])
@@ -18,12 +22,14 @@ function RecklessDrivingLawyer() {
       "https://cms-james-medows.herokuapp.com/api/reckless-driving-page?populate=deep"
     );
     const json = await data.json();
-    const { banner, ImageBanner, BlockGray, BlockWhite } = json.data.attributes;
+    const { banner, ImageBanner, BlockGray, BlockWhite,seo } = json.data.attributes;
 
     setBanner(banner);
     setImgBanner(ImageBanner);
     setBlockGray(BlockGray);
     setBlockWhite(BlockWhite);
+    setSeo(seo);
+
   }
 
    // check data
@@ -33,6 +39,19 @@ function RecklessDrivingLawyer() {
    if (!blockWhite) return null;
   return (
     <main className='RecklessDrivingLawyer'>
+      <SEO
+        title={seo?.title}
+        description={seo?.description}
+        image={seo?.image}
+        type={seo?.type}
+        
+        twitterCard={seo?.twitterCard}
+        twitterDomain={seo?.twitterDomain}
+        twitterUrl={seo?.twitterUrl}
+        twitterTitle={seo?.twitterTitle}
+        twitterDescription={seo?.twitterDescription}
+        twitterImage={seo?.twitterImage}
+      />
       <GeneralHero
         title={banner.title}
         bg_img={banner.bg_image.data.attributes.url}
