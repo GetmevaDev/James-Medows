@@ -15,27 +15,26 @@ function SEO({
 }) {
   return (
     <Helmet>
-      <title> {title && "Traffic Ticket Lawyer New York"} </title>
-      {title && <meta property="og:title" content={title} />}
+      <title>{title}</title>
+      <link rel="icon" href="/svg/logo.svg" />
+      <link rel="canonical" href={twitterUrl} />
+      {description ? (
+        <>
+          <meta name="description" content={description} />
+          <meta name="og:title" content={title} />
+          <meta name="og:description" content={description} />
+          <meta property="og:image" content={image} />
 
-      {description && <meta name="description" content={"description"} />}
-      {description && (
-        <meta property="og:description" content={"description"} />
+          <meta name="twitter:card" content={twitterCard} />
+          <meta property="twitter:domain" content={twitterDomain} />
+          <meta property="twitter:url" content={twitterUrl} />
+          <meta name="twitter:title" content={twitterTitle} />
+          <meta name="twitter:description" content={twitterDescription} />
+          <meta name="twitter:image" content={twitterImage} />
+        </>
+      ) : (
+        <meta name="robots" content="noindex, nofollow" />
       )}
-      {image && <meta property="og:image" content={"image"} />}
-      {type && <meta property="og:type" content={type} />}
-
-      {/* Twitter Meta Tags */}
-      {twitterCard && <meta name="twitter:card" content={twitterCard} />}
-      {twitterDomain && (
-        <meta property="twitter:domain" content={twitterDomain} />
-      )}
-      {twitterUrl && <meta property="twitter:url" content={twitterUrl} />}
-      {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
-      {twitterDescription && (
-        <meta name="twitter:description" content={twitterDescription} />
-      )}
-      {twitterImage && <meta name="twitter:image" content={twitterImage} />}
     </Helmet>
   );
 }
