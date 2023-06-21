@@ -38,6 +38,7 @@ import LeavingSceneOfAccidnet from "./pages/LeavingSceneOfAccident";
 import RecklessDrivingLawyer from "./pages/RecklessDrivingLawyer";
 import DrivingWhileSuspended from "./pages/DrivingWhileSuspended";
 import DWI from "./pages/DWI";
+import { HelmetProvider } from "react-helmet-async";
 
 const appRouter = createBrowserRouter([
   {
@@ -164,19 +165,22 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/practice-areas/driving-while-suspended-in-ny",
-        element: <DrivingWhileSuspended/>,
+        element: <DrivingWhileSuspended />,
       },
       {
         path: "/practice-areas/dwi-in-ny",
-        element: <DWI/>,
+        element: <DWI />,
       },
     ],
   },
 ]);
+const helmetContext = {};
 
 const root = createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <RouterProvider router={appRouter} />
+    <HelmetProvider context={helmetContext}>
+      <RouterProvider router={appRouter} />
+    </HelmetProvider>
   </Provider>
 );
