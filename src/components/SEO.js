@@ -14,12 +14,15 @@ function SEO({
   twitterImage,
 }) {
   return (
-    <Helmet>
-      <title>{title}</title>
-      <link rel="icon" href="/svg/logo.svg" />
-      <link rel="canonical" href={twitterUrl} />
-      {description ? (
-        <>
+    <>
+      {title && (
+        <Helmet>
+          <title>{title}</title> <link rel="icon" href="/svg/logo.svg" />
+          <link rel="canonical" href={twitterUrl} />
+        </Helmet>
+      )}
+      {description && (
+        <Helmet>
           <meta name="description" content={description} />
           <meta name="og:title" content={title} />
           <meta name="og:description" content={description} />
@@ -31,11 +34,9 @@ function SEO({
           <meta name="twitter:title" content={twitterTitle} />
           <meta name="twitter:description" content={twitterDescription} />
           <meta name="twitter:image" content={twitterImage} />
-        </>
-      ) : (
-        <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
       )}
-    </Helmet>
+    </>
   );
 }
 
