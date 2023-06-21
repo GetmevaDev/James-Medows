@@ -38,7 +38,6 @@ import LeavingSceneOfAccidnet from "./pages/LeavingSceneOfAccident";
 import RecklessDrivingLawyer from "./pages/RecklessDrivingLawyer";
 import DrivingWhileSuspended from "./pages/DrivingWhileSuspended";
 import DWI from "./pages/DWI";
-import { HelmetProvider } from "react-helmet-async";
 
 const appRouter = createBrowserRouter([
   {
@@ -174,13 +173,10 @@ const appRouter = createBrowserRouter([
     ],
   },
 ]);
-const helmetContext = {};
 
 const root = createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <HelmetProvider context={helmetContext}>
-      <RouterProvider router={appRouter} />
-    </HelmetProvider>
+    <RouterProvider router={appRouter} />
   </Provider>
 );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 function SEO({
   title,
@@ -21,12 +21,14 @@ function SEO({
           <link rel="canonical" href={twitterUrl} />
         </Helmet>
       )}
+      <meta name="description" content="description" />
+      <meta property="og:image" content="image" />
+      <meta name="og:description" content="og description" />
+
       {description && (
         <Helmet>
-          <meta name="description" content={description} />
           <meta name="og:title" content={title} />
-          <meta name="og:description" content={description} />
-          <meta property="og:image" content={image} />
+          <meta name="og:type" content={type} />
 
           <meta name="twitter:card" content={twitterCard} />
           <meta property="twitter:domain" content={twitterDomain} />
