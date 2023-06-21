@@ -67,7 +67,6 @@ function Home() {
         description={seo?.description}
         image={seo?.image}
         type={seo?.type}
-        
         twitterCard={seo?.twitterCard}
         twitterDomain={seo?.twitterDomain}
         twitterUrl={seo?.twitterUrl}
