@@ -15,25 +15,53 @@ function SEO({
 }) {
   return (
     <Helmet>
-      <title> {title && "Traffic Ticket Lawyer New York"} </title>
-      {title && <meta property="og:title" content={title} />}
+      <title>New York Traffic Ticket Lawyer in Brooklyn: James Medows</title>
+      <meta
+        name="description"
+        content="Best traffic ticket lawyer in New York: James Medows. An experienced traffic ticket attorney in Brooklyn, NY: Schedule a consultation online now!"
+      />
 
-      {description && <meta name="description" content={description} />}
-      {description && <meta property="og:description" content={description} />}
-      {image && <meta property="og:image" content={image} />}
-      {type && <meta property="og:type" content={type} />}
+      {/* <!-- Facebook Meta Tags --> */}
+      <meta
+        property="og:url"
+        content="https://trafficticketlawyernewyork.com"
+      />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="New York Traffic Ticket Lawyer in Brooklyn: James Medows"
+      />
+      <meta
+        property="og:description"
+        content="Best traffic ticket lawyer in New York: James Medows. An experienced traffic ticket attorney in Brooklyn, NY: Schedule a consultation online now!"
+      />
+      <meta
+        property="og:image"
+        content="https://res.cloudinary.com/rgm/image/upload/v1685378377/home_hero_bg_79c439c9f0.png"
+      />
 
-      {/* Twitter Meta Tags */}
-      {twitterCard && <meta name="twitter:card" content={twitterCard} />}
-      {twitterDomain && (
-        <meta property="twitter:domain" content={twitterDomain} />
-      )}
-      {twitterUrl && <meta property="twitter:url" content={twitterUrl} />}
-      {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
-      {twitterDescription && (
-        <meta name="twitter:description" content={twitterDescription} />
-      )}
-      {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+      {/* <!-- Twitter Meta Tags --> */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:domain"
+        content="trafficticketlawyernewyork.com"
+      />
+      <meta
+        property="twitter:url"
+        content="https://trafficticketlawyernewyork.com"
+      />
+      <meta
+        name="twitter:title"
+        content="New York Traffic Ticket Lawyer in Brooklyn: James Medows"
+      />
+      <meta
+        name="twitter:description"
+        content="Best traffic ticket lawyer in New York: James Medows. An experienced traffic ticket attorney in Brooklyn, NY: Schedule a consultation online now!"
+      />
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/rgm/image/upload/v1685378377/home_hero_bg_79c439c9f0.png"
+      />
     </Helmet>
   );
 }
