@@ -14,31 +14,30 @@ function SEO({
   twitterImage,
 }) {
   return (
-    <>
-      {title && (
-        <Helmet>
-          <title>{title}</title> <link rel="icon" href="/svg/logo.svg" />
-          <link rel="canonical" href={twitterUrl} />
-        </Helmet>
-      )}
-      <meta name="description" content="description" />
-      <meta property="og:image" content="image" />
-      <meta name="og:description" content="og description" />
+    <Helmet>
+      <title> {title && "Traffic Ticket Lawyer New York"} </title>
+      {title && <meta property="og:title" content={title} />}
+      <link rel="canonical" href={twitterUrl} />
 
+      {description && <meta name="description" content={"description"} />}
       {description && (
-        <Helmet>
-          <meta name="og:title" content={title} />
-          <meta name="og:type" content={type} />
-
-          <meta name="twitter:card" content={twitterCard} />
-          <meta property="twitter:domain" content={twitterDomain} />
-          <meta property="twitter:url" content={twitterUrl} />
-          <meta name="twitter:title" content={twitterTitle} />
-          <meta name="twitter:description" content={twitterDescription} />
-          <meta name="twitter:image" content={twitterImage} />
-        </Helmet>
+        <meta property="og:description" content={"description"} />
       )}
-    </>
+      {image && <meta property="og:image" content={"image"} />}
+      {type && <meta property="og:type" content={type} />}
+
+      {/* Twitter Meta Tags */}
+      {twitterCard && <meta name="twitter:card" content={twitterCard} />}
+      {twitterDomain && (
+        <meta property="twitter:domain" content={twitterDomain} />
+      )}
+      {twitterUrl && <meta property="twitter:url" content={twitterUrl} />}
+      {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
+      {twitterDescription && (
+        <meta name="twitter:description" content={twitterDescription} />
+      )}
+      {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+    </Helmet>
   );
 }
 
