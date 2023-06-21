@@ -17,13 +17,10 @@ function SEO({
     <Helmet>
       <title> {title && "Traffic Ticket Lawyer New York"} </title>
       {title && <meta property="og:title" content={title} />}
-      <link rel="canonical" href={twitterUrl} />
 
-      {description && <meta name="description" content={"description"} />}
-      {description && (
-        <meta property="og:description" content={"description"} />
-      )}
-      {image && <meta property="og:image" content={"image"} />}
+      {description && <meta name="description" content={description} />}
+      {description && <meta property="og:description" content={description} />}
+      {image && <meta property="og:image" content={image} />}
       {type && <meta property="og:type" content={type} />}
 
       {/* Twitter Meta Tags */}
