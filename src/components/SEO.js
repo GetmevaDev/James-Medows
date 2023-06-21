@@ -16,7 +16,7 @@ function SEO({
 }) {
   return (
     <Helmet>
-      <title> {title && "Traffic Ticket Lawyer New York"} </title>
+      <title> {title ? title : "Traffic Ticket Lawyer New York"} </title>
       {title && <meta property="og:title" content={title} />}
       {description && <meta name="description" content={description} />}
       {description && <meta name="og:description" content={description} />}
